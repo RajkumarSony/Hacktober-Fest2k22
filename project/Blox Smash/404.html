@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./Game Assets/img/appIcon.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#261196">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./Game Assets/img/icons/icon-180x180.png">
+    <meta name="app-mobile-web-app-staus" content="#261196">
+
+    <title>Page Not Found</title>
+
+    <style media="screen">
+        body {
+            color: rgba(0, 0, 0, 0.87);
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(./Game\ Assets/img/game-background.jpg);
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+        }
+        
+        #message {
+            background: linear-gradient(90deg, rgba(68, 68, 237, 0.733) 23%, rgba(167, 9, 167, 0.7) 80%);
+            max-width: 360px;
+            margin: 100px auto 16px;
+            padding: 32px 24px 16px;
+            border-radius: 3px;
+        }
+        
+        #message h3 {
+            color: #888;
+            font-weight: normal;
+            font-size: 16px;
+            margin: 16px 0 12px;
+        }
+        
+        #message h2 {
+            color: #ffa100;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+        
+        #message h1 {
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.6);
+            margin: 0 0 16px;
+        }
+        
+        #message p {
+            color: #ffa100;
+            line-height: 140%;
+            margin: 16px 0 24px;
+            font-size: 18px;
+            font-style: oblique;
+        }
+        
+        #message a {
+            display: block;
+            text-align: center;
+            background: #039be5;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            padding: 16px;
+            border-radius: 4px;
+        }
+        
+        #message,
+        #message a {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        
+        #load {
+            color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 600px) {
+            body,
+            #message {
+                margin-top: 0;
+                background: linear-gradient(90deg, rgba(68, 68, 237, 0.733) 23%, rgba(167, 9, 167, 0.7) 80%);
+                box-shadow: none;
+            }
+            body {
+                background: url(./Game\ Assets/img/game-background.jpg);
+                background-repeat: no-repeat;
+                background-size: 100vw 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">
+        <h2>404</h2>
+        <h1>Page Not Found</h1>
+        <p id="Quo">There are million of pages on Internet and you Choose this one</p>
+
+    </div>
+    <script>
+        var Quotes = ["That'll teach you to buy a 'good as new' URL.", "First crop circles and now this... Weird!", "Wait, don't leave! Let's make our own webpage!", "Sometimes we like to get a little crazy and type in totally random URLs to see what happens. This is what happens.", "You saw nothing... NOTHING!", "We sent this page to NASA for testing.", "Your URL is an Unreliable Resource Locator.", "On the internet, no one can hear you scream", "If at first you don't succeed, type, type again.", "Nothing to see here. Move along, buddy.", "This page has moved to California to find itself.", "Aliens must have abducted this page!", "If someone makes a webpage and gives the wrong URL, does it really exist?", "Apparently, this page is not compatible with any browsers.", "We didn't do it here.", "It looks like the typing class your cat is taking is not 100% successful.", "Great, now you've gone and done it. You've broken the Internet. Way to go!", "Some folks can see dead people - can you see dead pages?", "You're disappointed? Mom wanted us to be a doctor.", "This page is only viewable by Jimmy Hoffa, Amelia Earhart, Jim Morrison, and Howard Hughes.", "If true happiness can only be achieved through a state of nothingness, you're going down the right path.", "'I remember when the internet only had a few pages, and they all worked' - 'Sure, Grampa...'", "CDIV (Et tu, Angelfire?)", "It only takes one wrong letter to hold back this page, not a nation of millions.", "Your lucky numbers for today: 4, 0, 4.", "The dog ate your webpage. Yeah, that's it.", "The page you wanted is taking a long lunch.", "If you're reading this, it means this page is no more. It's probably not your fault.", "OK, that's the last time we let you drive.", "Hope you didn't pay too much for that URL.", "The page you requested is taking a coffee break.", "This webpage packed its bags and moved to Toledo.", "Yup, one day this page got up and walked away"]
+        console.log(Quotes.length)
+        var index = Math.floor(Math.random() * Quotes.length);
+        document.getElementById("Quo").innerHTML = Quotes[index];
+    </script>
+</body>
+<script src="./Game Assets/Script/app.js"></script>
+
+</html>

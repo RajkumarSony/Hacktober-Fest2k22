@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#261196">
+    <meta name="description" content="Play Tetris Game Online on any device. Crete a shortcut to the home screen and enjoy it like any other mobile or dekstop app .">
+
+    <title>Blox Smash</title>
+    <link rel="stylesheet" href="./Game Assets/Style/style.css">
+    <link rel="shortcut icon" href="./Game Assets/img/appIcon.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./Game Assets/img/icons/icon-180x180.png">
+    <meta name="app-mobile-web-app-staus" content="#261196">
+
+</head>
+
+<body body>
+    <style>
+        #message {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            width: 100%;
+            height: 400px;
+            position: relative;
+            top: 20;
+        }
+        
+        #message p {
+            font-size: 20px;
+            margin: 3% 0;
+        }
+        
+        #message img {
+            margin: 3% 0 1% 0;
+        }
+    </style>
+    <canvas id="bgcanvas"></canvas>
+
+    <div id="wrapper">
+
+        <div id="menu">
+            <img id="Title" src="./Game Assets/img/Blox-Smash.png" alt="">
+            <div id="message">
+                <img src="./Game Assets/img/offline.png" width=40 height=40 alt="offline"><span></span>
+                <h2>Your are offline</h2>
+                <p>you cannot view this page offline</p>
+                <p style="margin:-3% 0; font-weight:bold"> Go to Home page</p>
+
+                <button style="margin-top:5%" onclick="window.location.href='/'" id="start">Home</button>
+            </div>
+        </div>
+        <div id="loading">
+            <img id="logo" src="./Game Assets/img/appIcon.png" alt="Game Logo">
+            <img id="loadingimg" src="./Game Assets/img/loading.gif" alt="loading">
+        </div>
+
+
+
+        <script src="./Game Assets/Script/bgcanvas.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="/__/firebase/8.6.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="/__/firebase/8.6.1/firebase-analytics.js"></script>
+
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+
+        <!-- Rgister servise worker -->
+        <script src="./Game Assets/Script/app.js"></script>
+</body>
+
+</html>

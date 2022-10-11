@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --borderColor: rgb(30, 107, 233);
+    --widthCanvas: 250;
+}
+
+body {
+    /* background-image: url(../img/game-background.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    overflow: hidden;
+}
+
+#bgcanvas {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* background: black; */
+    z-index: 0;
+}
+
+#wrapper {
+    position: absolute;
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    margin-top: 2vh;
+    justify-content: center;
+}
+
+#GameArea {
+    position: absolute;
+    margin-top: 20px;
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    touch-action: none;
+}
+
+#gameCanvas {
+    border: 2px solid var(--borderColor);
+    margin: 0 0 0 5px;
+    width: 200px;
+    height: 400px;
+    /* border-radius: 20px */
+    /* background-color: rgba(19, 18, 18, 0.8); */
+}
+
+#SLN {
+    --width: 140px;
+    display: flex;
+    width: var(--width);
+    height: calc(2*var(--widthCanvas));
+    border: 2px solid var(--borderColor);
+    flex-direction: column;
+}
+
+#SCORE,
+#Level {
+    height: fit-content;
+    width: calc(var(--width)-0);
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#NEXT {
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#NEXT canvas {
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+#sc,
+#lv {
+    margin-top: 6px;
+}
+
+
+/* @charset "UTF-8"; */
+
+#play-pause {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+#play-pause:checked+#play-pause-label::after {
+    content: "►";
+}
+
+#play-pause-label::after {
+    content: "❙❙";
+}
+
+#pauseResume {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 22px;
+    font-size: 30px;
+    flex-direction: column;
+}
+
+#iconL {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#Lsc,
+#Ln,
+#Ll,
+#Li,
+#sc,
+#lv,
+#play-pause,
+#iconL,
+#menu,
+#message {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+}
+
+#menu {
+    display: flex;
+    /* background-color: rgba(98, 231, 225, 0.753); */
+    /* background-color: red; */
+    /* background: radial-gradient(circle, rgba(239, 0, 255, 1) 2%, rgba(2, 0, 36, 1) 57%, rgba(45, 45, 174, 1) 75%); */
+    /* margin: 20px; */
+    background: linear-gradient(90deg, rgba(68, 68, 237, 0.733) 23%, rgba(167, 9, 167, 0.7) 80%);
+    position: absolute;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+}
+
+#menu h3 {
+    display: none;
+    font-size: 38px;
+    height: 47px;
+    width: 242px;
+    margin: 16px 0 11px 0;
+    background-color: rebeccapurple;
+    border-radius: 30px;
+    color: rgb(37, 228, 148);
+    text-align: center;
+    font-weight: 800;
+}
+
+#displayScore {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+#highScore {
+    display: none;
+    font-size: 20px;
+    font-family: monospace;
+    margin: 17px 0 0 0;
+}
+
+#playwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu button {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    border: 2px outset #36f47f;
+    border-radius: 70px;
+}
+
+#menu button:hover {
+    background-color: #36f47f;
+    color: white;
+}
+
+#menu button:active {
+    transform: translateX(4px);
+    transform: translateY(-4px);
+}
+
+#start {
+    width: 182px;
+    height: 77px;
+    font-size: xxx-large;
+    margin-top: 75px;
+}
+
+#newGame {
+    font-size: 28px;
+    display: none;
+    width: 150px;
+    height: 60px;
+    margin-top: 34px;
+}
+
+#resume {
+    font-size: 28px;
+    display: none;
+    width: 150px;
+    height: 60px;
+    margin-top: 45px;
+}
+
+#Music {
+    display: flex;
+    justify-self: flex-end;
+    margin-top: 45px
+}
+
+#loading {
+    position: absolute;
+    display: flex;
+    background: linear-gradient(90deg, rgba(68, 68, 237) 23%, rgba(167, 9, 167) 80%);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+#loadingimg {
+    width: 150px;
+    height: 400px;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+
+/* Responsice Design */
+
+@media only screen and (max-width: 600px) {
+    #SLN {
+        --width: 70px;
+        height: 320px;
+    }
+    #gameCanvas {
+        width: 160px;
+        height: 320px;
+    }
+    #SCORE,
+    #Level,
+    #NEXT,
+    #iconL {
+        font-size: 20px;
+    }
+    #NEXT {
+        margin-top: 15px;
+    }
+    #menu,
+    #message {
+        /* width: 230px; */
+        height: 420px;
+    }
+    #Title {
+        width: 280px;
+        /* height: 100px; */
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    #SLN {
+        --width: 90px;
+        height: 360px;
+    }
+    #gameCanvas {
+        width: 180px;
+        height: 360px;
+    }
+    #pauseResume {
+        margin-top: 22px;
+        font-size: 30px;
+    }
+    #menu,
+    #message {
+        /* width: 270px; */
+        height: 420px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    #SLN {
+        --width: 120px;
+        height: 400px;
+    }
+    #gameCanvas {
+        width: 200px;
+        height: 400px;
+    }
+    #pauseResume {
+        margin-top: 22px;
+        font-size: 25px;
+    }
+    #menu,
+    #message {
+        /* width: 320px; */
+        height: 480px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    #SLN {
+        --width: 160px;
+        height: 460px;
+    }
+    #gameCanvas {
+        width: 230px;
+        height: 460px;
+    }
+    #pauseResume {
+        margin-top: 26px;
+        font-size: 30px;
+    }
+    #SCORE,
+    #Level,
+    #NEXT,
+    #iconL {
+        font-size: 28px;
+    }
+    #NEXT {
+        margin-top: 22px;
+    }
+    #menu,
+    #message {
+        /* width: 390px; */
+        height: 500px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    #SLN {
+        --width: 200px;
+        height: 540px;
+    }
+    #gameCanvas {
+        width: 280px;
+        height: 540px;
+    }
+    #pauseResume {
+        margin-top: 30px;
+        font-size: 40px;
+    }
+    #SCORE,
+    #Level,
+    #NEXT,
+    #iconL {
+        font-size: 35px;
+    }
+    #NEXT {
+        margin-top: 30px;
+    }
+    #menu,
+    #message {
+        /* width: 480px; */
+        height: 580px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #SLN {
+        --width: 200px;
+        height: 600px;
+    }
+    #gameCanvas {
+        width: 300px;
+        height: 600px;
+    }
+    #pauseResume {
+        margin-top: 30px;
+        font-size: 40px;
+    }
+    #SCORE,
+    #Level,
+    #NEXT,
+    #iconL {
+        font-size: 38px;
+    }
+    #NEXT {
+        margin-top: 33px;
+    }
+    #menu,
+    #message {
+        /* width: 500px; */
+        height: 650px;
+    }
+}
+
+@media only screen and (min-width:1900px) {
+    #SLN {
+        --width: 250px;
+        height: 760px;
+    }
+    #gameCanvas {
+        width: 380px;
+        height: 760px;
+    }
+    #menu,
+    #message {
+        width: 630px;
+        height: 760px;
+    }
+    #pauseResume {
+        margin-top: 40px;
+        font-size: 60px;
+    }
+    #SCORE,
+    #Level,
+    #NEXT,
+    #iconL {
+        font-size: 45px;
+    }
+    #NEXT {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (min-width:2200px) {
+    #SLN {
+        --width: 250px;
+        height: 950px;
+    }
+    #gameCanvas {
+        width: 475px;
+        height: 950px;
+    }
+    #menu,
+    #message {
+        /* width: 725px; */
+        height: 950px;
+    }
+    #pauseResume {
+        margin-top: 60px;
+        font-size: 80px;
+    }
+    #SCORE,
+    #Level,
+    #NEXT,
+    #iconL {
+        font-size: 55px;
+    }
+    #NEXT {
+        margin-top: 50px;
+    }
+}

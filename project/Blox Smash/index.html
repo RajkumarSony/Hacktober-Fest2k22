@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#261196">
+    <meta name="description" content="Play Tetris Game Online on any device. Crete a shortcut to the home screen and enjoy it like any other mobile or dekstop app .">
+
+    <title>Blox Smash</title>
+    <link rel="stylesheet" href="./Game Assets/Style/style.css">
+    <link rel="shortcut icon" href="./Game Assets/img/appIcon.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./Game Assets/img/icons/icon-180x180.png">
+    <meta name="app-mobile-web-app-staus" content="#261196">
+</head>
+
+<body body>
+    <canvas id="bgcanvas"></canvas>
+
+    <div id="wrapper">
+        <div id="GameArea">
+            <canvas id="gameCanvas" width="300" height="600">
+            </canvas>
+            <div id="SLN">
+                <div id="SCORE">
+                    <label for="sc" id="Lsc">Score</label>
+                    <div id="sc" name="sc">0</div>
+                </div>
+
+                <div id="NEXT">
+                    <label for="precan" id="Ln">Next</label>
+                    <canvas name="precan" id="preCanvas" width="120" height="120"></canvas>
+                </div>
+                <div id="Level">
+                    <label for="lv" id="Ll">Level</label>
+                    <div id="lv" name="lv">1</div>
+
+                </div>
+                <div id="playwrapper">
+
+                    <div id="pauseResume">
+
+                        <input type="checkbox" id="play-pause" /><label for="play-pause" name="play-pause" id="play-pause-label" class="win-button"></label>
+                    </div>
+                    <label for="play-pause" id="iconL"> Pause</label>
+                </div>
+            </div>
+
+        </div>
+        <div id="menu">
+            <img id="Title" src="./Game Assets/img/Blox-Smash.png" alt="">
+            <h3 id="Gover">Game Over</h3>
+            <div id="displayScore">
+
+                <h4>Your Score:</h4>
+                <p id="Dscore">0</p>
+                <p id="highScore"> New High Score</p>
+            </div>
+
+            <button onclick="StartGame()" id="start">Start</button>
+            <button onclick="newGame()" id="newGame">New Game</button>
+            <button onclick="resume()" id="resume">Resume</button>
+            <div id="Music">
+
+                <img id="Sound" src="./Game Assets/img/Sound.png" width="40" height="40" style="margin:0 20px" alt="" srcset="">
+                <img id="MusicNote" src="./Game Assets/img/music-note.png" width="40" height="40" style="margin:0 20px" alt="" srcset="">
+            </div>
+
+        </div>
+    </div>
+    <div id="loading">
+        <img id="logo" src="./Game Assets/img/appIcon.png" alt="Game Logo">
+        <img id="loadingimg" src="./Game Assets/img/loading.gif" alt="loading">
+    </div>
+
+
+    <script src="./Game Assets/Script/index.js"></script>
+    <script src="./Game Assets/Script/app.js"></script>
+    <script src="./Game Assets/Script/bgcanvas.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="/__/firebase/8.6.1/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="/__/firebase/8.6.1/firebase-analytics.js"></script> -->
+
+    <!-- Initialize Firebase -->
+    <!-- <script src="/__/firebase/init.js"></script> -->
+</body>
+
+</html>

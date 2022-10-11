@@ -63,7 +63,7 @@ About Submit Just 4 PRs to earn SWAGS and Tshirts🔥
 - Clone the forked repository to your local machine.
 
 ```markdown
-git clone https://github.com/RajkumarSony/HacktoberFest2022.git
+git clone https://github.com/RajkumarSony/Hacktober-Fest2k22.git
 ```
 
 - Change the present working directory.

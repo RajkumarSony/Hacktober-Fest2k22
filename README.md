@@ -4,7 +4,7 @@ About Submit Just 4 PRs to earn SWAGS and Tshirts🔥
 
 # 🌱 Contributing to hacktoberfest 2022
 
-![Hacktoberfest 2022](https://github.com/RajkumarSony/HacktoberFest2022/blob/main/logo.png)
+![Hacktoberfest 2022](https://github.com/RajkumarSony/Hacktober-Fest2k22/blob/main/logo.png)
 
 ---
 

@@ -1,3 +1,13 @@
+# This Repo has been **EXCLUDED** due to wrong repo name.
+
+---
+
+# Kindly open [LeetCode-Solutions Repo](https://github.com/RajkumarSony/LeetCode-Solutions) and start contributing... 🎉
+
+## Best of Luck!!
+
+---
+
 # Hacktober-Fest2k22
 About Submit Just 4 PRs to earn SWAGS and Tshirts🔥
 

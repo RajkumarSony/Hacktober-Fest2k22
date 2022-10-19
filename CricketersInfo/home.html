@@ -1,0 +1,203 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CricketerInfo</title>
+     <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./image/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./image/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./image/favicon-16x16.png"
+    />
+   
+    <link rel="stylesheet" href="./style.css">
+   <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      .banner-image {
+        background-image: url("./image/bg.jpg");
+        background-size: cover;
+        background-position: center center;
+      }
+    </style>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Open+Sans:wght@300&family=Oswald:wght@400;700&family=Ubuntu:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./image/cricketlogo.jpg"
+            alt="logo"
+            width="40"
+            height="40"
+            class="rounded-pill"
+          />
+        </a>
+        <a class="navbar-brand" href="./home.html">Cricket Info</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                href="mailto:mdseraj96088@gmail.com?subject=Regarding Feedback"
+                >Mail Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="content text-center bg-secondary">
+        <h1 class="text-light">This Website Is CricketerInfo</h1>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h1 class="text-center">Search Your Favourite Or  Any Cricketer You Want</h1>
+      <form id="form">
+        <div class="text-center">
+          <input
+            id="cricketername"
+            type="text"
+            placeholder="Cricketer's Name"
+            autocomplete="off"
+            required
+            spellcheck="false"
+          />
+          <input id="btn" type="submit" value="Get Info" />
+        </div>
+      </form>
+<div class="text-center font">
+      <div>
+        <img src="" id="playerimg" >
+      </div >
+      <hr>
+      <div class="my-3">
+         <h5 id="name"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="dob"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="birthplace"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="bat"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="bowl"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="height"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="team"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="batodirank"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="batt20rank"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="battestrank"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="bowlodirank"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="bowlt20rank"></h5>
+      </div>
+      <div class="my-3">
+        <h5 id="bowltestrank"></h5>
+      </div class="my-3">
+      <div class="my-5">
+
+        <h5 id="bio"></h5>
+      </div>
+</div>
+
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div
+        class="text-center"
+        style="background-color: rgba(0, 0, 0, 0.541)"
+      >
+        © 2022 Copyright:
+        <h6>Cricketers-Info All Rigths Reserved</h6>
+        <div>
+          <h6>
+            <a
+              style="text-decoration: none"
+              id="feedback"
+              class="text-white"
+              href="mailto:superheroinfo18@gmail.com?subject=Regarding Feedback"
+              >Give Us FeedBack</a
+            >
+          </h6>
+        </div>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript">
+    var nav = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > 100) {
+        nav.classList.add("bg-dark", "shadow");
+      } else {
+        nav.classList.remove("bg-dark", "shadow");
+      }
+    });
+  </script>
+  <script src="./main.js"></script>
+</html>
